@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADDA.io × Bhanu Kumar · Strategic Product Marketing Blueprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --surface: #ffffff;
+      --surface-subtle: #f1f5f9;
+      --border: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --ink: #09121f;
+      --ink-secondary: #334155;
+      --ink-muted: #64748b;
+      --brand: #00afd8;
+      --brand-dark: #0284a8;
+      --brand-tint: #e6f7fb;
+      --violet: #7232d9;
+      --violet-tint: #f5f0fd;
+      --lime: #84cc16;
+      --lime-tint: #f7fee7;
+      --emerald: #10b981;
+      --emerald-tint: #ecfdf5;
+      --amber: #f59e0b;
+      --amber-tint: #fffbeb;
+      --rose: #f43f5e;
+      --rose-tint: #fff1f2;
+      --shadow-sm: 0 1px 3px rgba(9, 18, 31, 0.05);
+      --shadow-md: 0 6px 20px -4px rgba(9, 18, 31, 0.08);
+      --shadow-lg: 0 16px 40px -8px rgba(9, 18, 31, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Single Clean Header with Strict No-Wrap */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-svg {
+      height: 26px;
+      width: auto;
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 20px;
+      background-color: var(--border);
+    }
+
+    .header-title-text {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink-secondary);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      transition: color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      color: var(--brand);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .pill-btn-outline {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    .pill-btn-outline:hover {
+      border-color: var(--ink-secondary);
+      background: var(--surface-subtle);
+    }
+
+    .pill-btn-brand {
+      background: linear-gradient(135deg, #00afd8 0%, #7232d9 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 175, 216, 0.2);
+    }
+
+    .pill-btn-brand:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0, 175, 216, 0.3);
+    }
+
+    /* Hero Section */
+    section.hero-section {
+      padding: 56px 0 48px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-cyan {
+      background: var(--brand-tint);
+      color: var(--brand-dark);
+      border: 1px solid rgba(0, 175, 216, 0.25);
+    }
+
+    .badge-subtle {
+      background: var(--surface-subtle);
+      color: var(--ink-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 960px;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span.accent-serif {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--violet);
+    }
+
+    .hero-subtitle {
+      font-size: 17.5px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+      max-width: 840px;
+      margin-bottom: 36px;
+    }
+
+    /* Catchy Interactive Draggable Before / After Slider Hook */
+    .ba-slider-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      cursor: ew-resize;
+      user-select: none;
+      -webkit-user-select: none;
+      margin-bottom: 32px;
+    }
+
+    /* Right Side: The PMM Adoption Engine (Clean Cyan/Violet Ambient Dark Canvas) */
+    .ba-side-after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #071321 0%, #0c1c30 50%, #11263d 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .ba-after-content {
+      width: 100%;
+      max-width: 520px;
+      margin-left: auto;
+      padding-right: 20px;
+    }
+
+    .ba-badge-after {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 175, 216, 0.2);
+      border: 1px solid #00afd8;
+      color: #38bdf8;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    .ba-head-after {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .ba-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ba-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14.5px;
+      color: #cbd5e1;
+    }
+
+    .ba-check-item b {
+      color: #ffffff;
+    }
+
+    .ba-check-icon {
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    /* Left Side: The Unmanaged Adoption Gap (Clipped) */
+    .ba-side-before {
+      position: absolute;
+      inset: 0;
+      width: 50%;
+      overflow: hidden;
+      z-index: 2;
+      background: linear-gradient(135deg, #1b0f14 0%, #26141c 50%, #1a0f16 100%);
+      color: #ffffff;
+      will-change: width;
+    }
+
+    .ba-before-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 32px;
+    }
+
+    .ba-before-content {
+      width: 100%;
+      max-width: 520px;
+      padding-left: 20px;
+    }
+
+    .ba-badge-before {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(244, 63, 94, 0.2);
+      border: 1px solid #f43f5e;
+      color: #fb7185;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    .ba-head-before {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .ba-friction-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ba-friction-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14.5px;
+      color: #e2e8f0;
+    }
+
+    .ba-friction-item b {
+      color: #ffffff;
+    }
+
+    .ba-friction-icon {
+      color: #f43f5e;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    /* Draggable Handle */
+    .ba-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #00afd8;
+      box-shadow: 0 0 12px #00afd8;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #00afd8;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+      cursor: grab;
+      transition: transform 0.15s ease;
+    }
+
+    .ba-handle:active {
+      cursor: grabbing;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .ba-handle svg {
+      width: 18px;
+      height: 18px;
+      fill: #00afd8;
+    }
+
+    .ba-side-tag {
+      position: absolute;
+      bottom: 16px;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-left {
+      left: 24px;
+      color: #fb7185;
+      z-index: 5;
+    }
+
+    .tag-right {
+      right: 24px;
+      color: #38bdf8;
+    }
+
+    /* 4-Stage Adoption Lifecycle Stepper */
+    .adoption-framework-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .framework-header {
+      padding: 18px 24px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .framework-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .framework-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .framework-step-btn {
+      padding: 18px 20px;
+      background: transparent;
+      border: none;
+      border-right: 1px solid var(--border);
+      border-bottom: 3px solid transparent;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .framework-step-btn:last-child {
+      border-right: none;
+    }
+
+    .framework-step-btn:hover {
+      background: var(--bg-alt);
+    }
+
+    .framework-step-btn.active {
+      background: #ffffff;
+      border-bottom-color: var(--brand);
+      box-shadow: inset 0 -3px 0 var(--brand);
+    }
+
+    .step-badge {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .step-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .step-summary {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    /* Dynamic Stage Detail View */
+    .framework-detail-view {
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      background: #ffffff;
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .framework-detail-view.fade-out {
+      opacity: 0.2;
+      transform: translateY(6px);
+    }
+
+    .detail-section-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--brand-dark);
+      margin-bottom: 10px;
+    }
+
+    .detail-heading {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .detail-description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+      margin-bottom: 20px;
+    }
+
+    .deliverables-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .deliverables-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .deliverable-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+
+    .deliverable-icon {
+      color: var(--brand);
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    .detail-side-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .side-label {
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+
+    .hypothesis-quote {
+      font-size: 14.5px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--ink);
+      border-left: 3px solid var(--brand);
+      padding-left: 12px;
+    }
+
+    .target-stakeholder-pill {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    /* Content Sections */
+    section.content-section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section.bg-subtle {
+      background: var(--bg-alt);
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-tag {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-heading {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 920px;
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 780px;
+    }
+
+    /* Section 1: Diagnostic Hypotheses */
+    .diagnostic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .diag-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .diag-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .diag-badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .diag-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .diag-hypothesis {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+    }
+
+    .diag-investigation {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+
+    /* Section 2: Spec-Stage Checkpoint */
+    .rubric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .rubric-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .rubric-num {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-pill);
+      background: var(--brand);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .rubric-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .rubric-body {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+    }
+
+    .rubric-deliverable {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      background: var(--brand-tint);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      margin-top: auto;
+    }
+
+    /* Section 3: 60-90 Day Playbook Cadence */
+    .cadence-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .cadence-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--brand);
+    }
+
+    .cadence-phase {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cadence-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .cadence-body {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--ink-secondary);
+    }
+
+    .cadence-metric-pill {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--surface-subtle);
+      color: var(--ink-secondary);
+      border: 1px solid var(--border);
+    }
+
+    /* Section 4: Competitive Enablement */
+    .disclaimer-banner {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #92400e;
+      font-weight: 500;
+    }
+
+    .disclaimer-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f59e0b;
+      flex-shrink: 0;
+    }
+
+    .battlecard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .battlecard {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .battlecard-header {
+      padding: 20px 22px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .bc-category {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .bc-competitor {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .battlecard-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .bc-block-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .bc-strength-text {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .bc-diff-box {
+      font-size: 14.5px;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.55;
+      background: var(--surface-subtle);
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--brand);
+    }
+
+    .bc-proof-text {
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    /* Section 5: 30-60-90 Day Milestones */
+    .milestones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .milestone-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .milestone-badge {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--ink);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      align-self: flex-start;
+    }
+
+    .milestone-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .milestone-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .milestone-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    .milestone-bullet {
+      color: var(--brand);
+      font-weight: 800;
+    }
+
+    .milestone-kpi {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-muted);
+    }
+
+    /* Section 6: Selected Case Studies */
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .case-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .case-card:hover {
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .case-tag {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .case-company {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .case-desc {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-secondary);
+    }
+
+    .case-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .case-link:hover {
+      color: var(--violet);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #09121f;
+      color: #ffffff;
+      padding: 60px 0 40px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .footer-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .footer-sub {
+      font-size: 15px;
+      color: #94a3b8;
+      max-width: 560px;
+    }
+
+    .footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #1e293b;
+      padding-top: 24px;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-links {
+        display: none;
+      }
+      .framework-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .framework-step-btn:nth-child(2) {
+        border-right: none;
+      }
+      .framework-detail-view {
+        grid-template-columns: 1fr;
+      }
+      .diagnostic-grid, .rubric-grid, .milestones-grid, .battlecard-grid {
+        grid-template-columns: 1fr;
+      }
+      .cadence-timeline, .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 32px;
+      }
+      .ba-slider-container {
+        height: 440px;
+      }
+      .framework-steps {
+        grid-template-columns: 1fr;
+      }
+      .framework-step-btn {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .cadence-timeline, .case-studies-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Single Clean Header with Strict No-Wrap -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand-group">
+          <!-- Official ADDA SVG Logo -->
+          <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1267 349" fill="none">
+            <path d="M603.653 120.9C603.183 84.7898 589.793 54.2398 561.563 31.2098C535.003 9.53977 503.843 0.319776 469.883 0.139776C436.743 -0.0402241 403.593 0.0797759 370.453 0.109776C356.893 0.119776 351.613 5.48977 351.613 19.1398C351.613 70.1898 351.613 121.25 351.613 172.3C351.613 223.15 351.613 273.99 351.613 324.84C351.613 339.89 356.833 345.19 371.833 345.2C403.933 345.23 436.033 345.34 468.143 345.15C482.973 345.06 497.623 343.19 511.983 339.24C569.693 323.36 603.753 278.81 603.753 219.05C603.753 186.33 604.083 153.61 603.663 120.9H603.653ZM548.823 225.98C548.413 264.57 521.823 292.47 481.633 296.67C458.373 299.1 434.983 297.23 411.653 297.7C406.983 297.79 406.363 294.88 406.383 291.09C406.463 270.88 406.423 250.67 406.423 230.46C406.423 211.29 406.423 192.12 406.423 172.95C406.423 133.99 406.423 95.0198 406.423 56.0598C406.423 47.5898 406.553 47.4198 415.243 47.4398C434.213 47.4698 453.173 47.5398 472.143 47.6298C480.963 47.6698 489.563 49.2398 497.963 51.7998C529.043 61.2698 548.483 86.5798 548.833 119.1C549.213 154.73 549.213 190.36 548.833 225.99L548.823 225.98Z" fill="#00AFD8"/>
+            <path d="M925.624 117.21C925.104 86.7698 914.014 60.2098 892.164 38.7998C864.484 11.6798 830.264 0.52978 792.184 0.15978C759.044 -0.16022 725.894 0.0797797 692.754 0.0997797C679.164 0.10978 673.974 5.37978 673.974 19.0798C673.974 70.1298 673.974 121.19 673.974 172.24C673.974 223.29 673.974 274.35 673.974 325.4C673.974 340.02 679.184 345.19 694.034 345.2C725.924 345.23 757.824 345.35 789.714 345.15C807.504 345.04 824.974 342.59 841.934 336.83C894.404 319.01 925.334 277.3 925.794 222.84C926.094 187.63 926.234 152.4 925.624 117.2V117.21ZM870.854 226.03C870.524 264.55 844.594 292.16 804.454 296.61C781.004 299.21 757.404 297.23 733.874 297.69C728.544 297.8 728.734 294.07 728.744 290.38C728.764 259.13 728.754 227.89 728.754 196.64C728.754 188.52 728.754 180.39 728.754 172.27C728.754 133.52 728.754 94.7798 728.754 56.0298C728.754 47.5298 728.834 47.4198 737.564 47.4398C756.734 47.4798 775.924 47.0698 795.064 47.7598C820.314 48.6598 842.424 56.9298 857.944 78.1698C866.834 90.3298 870.844 104.2 870.884 119.17C870.964 154.79 871.144 190.41 870.844 226.03H870.854Z" fill="#00AFD8"/>
+            <path d="M1264.32 324.29C1246.03 272.46 1227.78 220.63 1209.51 168.79C1191.59 117.94 1173.7 67.0698 1155.74 16.2398C1151.04 2.93978 1146.86 0.129781 1132.6 0.0997814C1126.76 0.0897814 1120.92 0.0997814 1115.08 0.0997814C1108.82 0.0997814 1102.57 0.0897814 1096.31 0.0997814C1082.51 0.129781 1078.05 3.18978 1073.57 15.9498C1039.66 112.38 1005.76 208.8 971.894 305.24C963.694 328.59 963.954 328.69 983.564 343.48C990.584 348.78 997.874 349.56 1005.95 347.42C1010.03 346.34 1013.66 344.3 1017.34 342.35C1068.32 315.31 1119.3 288.26 1170.29 261.22C1179.06 256.57 1181.51 257.58 1184.74 267.21C1191.69 287.93 1198.59 308.67 1205.53 329.4C1209.47 341.19 1214.6 344.99 1227.12 345.19C1234.63 345.31 1242.13 345.21 1249.64 345.21C1267 345.21 1270.12 340.72 1264.32 324.29ZM1157.02 213.35C1132.91 226.13 1108.81 238.95 1084.71 251.76C1074.59 257.14 1064.49 262.55 1054.37 267.92C1051.78 269.29 1048.96 270.91 1046.27 268.54C1043.77 266.34 1045.08 263.54 1045.92 260.97C1067.13 196.28 1088.33 131.6 1109.56 66.9198C1110.45 64.1898 1111.02 60.7198 1114.68 60.6998C1117.99 60.6798 1118.73 63.8298 1119.57 66.3998C1134.1 110.49 1148.63 154.58 1163.13 198.68C1163.71 200.45 1164.05 202.31 1164.43 203.85C1164.22 209.06 1160.83 211.33 1157.02 213.35Z" fill="#00AFD8"/>
+            <path d="M299.034 328.82C295.334 317.77 291.354 306.81 287.484 295.81C254.704 202.74 221.924 109.67 189.134 16.6098C184.344 3.01978 180.164 0.109781 165.604 0.0997814C153.924 0.0897814 142.254 0.0997814 130.574 0.0997814C115.424 0.0997814 111.364 2.99978 106.314 17.3898C76.7637 101.44 47.2137 185.5 17.6637 269.55C12.2737 284.87 6.79368 300.16 1.57368 315.54C-1.74632 325.3 0.0736818 330.66 8.11368 336.81C9.77368 338.08 11.5737 339.18 13.0837 340.6C24.2137 351.07 35.9937 350.21 48.6737 343.44C100.134 315.97 151.704 288.7 203.244 261.37C212.324 256.55 214.884 257.57 218.174 267.42C225.304 288.74 232.444 310.06 239.414 331.43C242.034 339.48 247.284 344.15 255.654 344.76C261.454 345.18 267.304 344.84 273.134 344.84C273.134 344.95 273.134 345.06 273.134 345.17C278.134 345.17 283.154 345.42 288.144 345.12C299.064 344.46 302.544 339.28 299.044 328.82H299.034ZM189.854 213.55C157.854 230.55 125.854 247.56 93.8437 264.57C91.2637 265.94 88.7237 267.38 86.1037 268.65C83.9937 269.68 81.7037 270.4 79.6637 268.62C77.6037 266.82 78.0837 264.46 78.8137 262.23C83.4437 247.98 88.0937 233.74 92.7637 219.5C109.294 169.07 125.844 118.65 142.384 68.2298C142.574 67.6398 142.744 67.0298 142.954 66.4498C143.864 63.9198 144.454 60.7598 147.794 60.6798C151.154 60.5998 151.904 63.6598 152.754 66.2598C156.464 77.5298 160.174 88.7998 163.884 100.06C174.364 131.88 184.854 163.71 195.324 195.53C196.234 198.28 196.964 201.1 197.464 202.8C197.694 209.35 193.794 211.47 189.854 213.56V213.55Z" fill="#00AFD8"/>
+          </svg>
+          <div class="brand-divider"></div>
+          <span class="header-title-text">Product Marketing Blueprint</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#adoption-framework" class="nav-link">Adoption Loop</a>
+          <a href="#adoption-gap" class="nav-link">Diagnosis</a>
+          <a href="#spec-stage" class="nav-link">Spec Gate</a>
+          <a href="#battlecards" class="nav-link">Battlecards</a>
+          <a href="#execution-plan" class="nav-link">Plan</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://drive.google.com/file/d/1a_WRIHF7RawD7rXkwYs3DNuPQf7zq_lf/view?usp=sharing" target="_blank" class="pill-btn pill-btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/bhanuexcalibur/" target="_blank" class="pill-btn pill-btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:bhanukumar0902@gmail.com" class="pill-btn pill-btn-brand">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-meta">
+        <span class="badge-pill badge-cyan">ADDA × Bhanu Kumar</span>
+        <span class="badge-pill badge-subtle">Product Marketing Strategy</span>
+      </div>
+
+      <h1 class="hero-title">
+        We ship a lot. Here is how we make 25,000+ communities <span class="accent-serif">actually discover and use it.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        When engineering ships at high velocity, customer awareness naturally lags. Here is a structured product marketing framework to ensure newly released capabilities are discovered, understood, and actively utilized across residential communities.
+      </p>
+
+      <!-- Catchy Interactive Before / After Slider Hook -->
+      <div class="ba-slider-container" id="baContainer">
+        <!-- Right Side: The PMM Adoption Engine -->
+        <div class="ba-side-after">
+          <div class="ba-after-content">
+            <div class="ba-badge-after">✓ &nbsp;Active Adoption Engine (PMM Owned)</div>
+            <div class="ba-head-after">The 60–90 Day Sustained Loop</div>
+            <ul class="ba-checklist">
+              <li class="ba-check-item">
+                <span class="ba-check-icon">✓</span>
+                <span><b>Spec Alignment:</b> Discoverability & volunteer relief agreed at PRD</span>
+              </li>
+              <li class="ba-check-item">
+                <span class="ba-check-icon">✓</span>
+                <span><b>Launch Channels:</b> Plain-English WhatsApp alerts & in-app spotlight banners</span>
+              </li>
+              <li class="ba-check-item">
+                <span class="ba-check-icon">✓</span>
+                <span><b>Adoption Loop:</b> 60–90 day telemetry tracking & automated sales battlecards</span>
+              </li>
+            </ul>
+          </div>
+          <div class="ba-side-tag tag-right">The Adoption Engine</div>
+        </div>
+
+        <!-- Left Side: The Unmanaged Adoption Gap (Clipped) -->
+        <div class="ba-side-before" id="baBefore">
+          <div class="ba-before-inner" id="baBeforeInner">
+            <div class="ba-before-content">
+              <div class="ba-badge-before">⚠️ &nbsp;Unmanaged Release Velocity</div>
+              <div class="ba-head-before">The Shipped vs. Adopted Gap</div>
+              <ul class="ba-friction-list">
+                <li class="ba-friction-item">
+                  <span class="ba-friction-icon">✕</span>
+                  <span><b>Changelog Friction:</b> Technical release notes sent to unread email trays</span>
+                </li>
+                <li class="ba-friction-item">
+                  <span class="ba-friction-icon">✕</span>
+                  <span><b>Volunteer Drop-off:</b> Features buried 3 sub-menus deep in admin settings</span>
+                </li>
+                <li class="ba-friction-item">
+                  <span class="ba-friction-icon">✕</span>
+                  <span><b>Sales Enablement Lag:</b> Decks & battlecards outdated during competitor renewals</span>
+                </li>
+              </ul>
+            </div>
+            <div class="ba-side-tag tag-left">The Adoption Gap</div>
+          </div>
+        </div>
+
+        <!-- Draggable Handle Divider -->
+        <div class="ba-divider" id="baDivider">
+          <div class="ba-handle" id="baHandle">
+            <svg viewBox="0 0 24 24"><path d="M8.5 6L3.5 12L8.5 18M15.5 6L20.5 12L15.5 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Adoption Architecture Card -->
+      <div class="adoption-framework-card" id="adoption-framework">
+        <div class="framework-header">
+          <span class="framework-title">The Feature-to-Adoption Lifecycle</span>
+          <span class="badge-pill badge-subtle">4-Stage Operating Framework</span>
+        </div>
+
+        <!-- 4-Stage Horizontal Stepper -->
+        <div class="framework-steps">
+          <button class="framework-step-btn active" data-step="0">
+            <div class="step-badge">Stage 1 · Day -15</div>
+            <div class="step-name">Spec Checkpoint</div>
+            <div class="step-summary">Aligning on volunteer relief, in-app discoverability, and setup friction.</div>
+          </button>
+          <button class="framework-step-btn" data-step="1">
+            <div class="step-badge">Stage 2 · Day 0</div>
+            <div class="step-name">Launch Activation</div>
+            <div class="step-summary">Translating specs into plain-English relief across WhatsApp and in-app feeds.</div>
+          </button>
+          <button class="framework-step-btn" data-step="2">
+            <div class="step-badge">Stage 3 · Days 15–45</div>
+            <div class="step-name">Content Drumbeat</div>
+            <div class="step-summary">Sustaining post-launch momentum through Feature of the Month reels and clinics.</div>
+          </button>
+          <button class="framework-step-btn" data-step="3">
+            <div class="step-badge">Stage 4 · Days 60–90</div>
+            <div class="step-name">Adoption & Proof</div>
+            <div class="step-summary">Analyzing telemetry drop-offs, establishing ROI proof, and updating battlecards.</div>
+          </button>
+        </div>
+
+        <!-- Dynamic Stage Detail View -->
+        <div class="framework-detail-view" id="framework-detail">
+          <div>
+            <div class="detail-section-title" id="stage-eyebrow">Stage 1 · Upstream Product Collaboration (Day -15)</div>
+            <h2 class="detail-heading" id="stage-heading">Solving discoverability before engineering writes code</h2>
+            <p class="detail-description" id="stage-description">
+              Product marketing sits with PMs at the PRD stage to define the core volunteer pain point, audit time-to-value, and agree on where the feature will physically surface in the product on Day 0.
+            </p>
+
+            <div class="deliverables-box">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 12px; letter-spacing: 0.04em;">
+                Key PMM Deliverables
+              </div>
+              <ul class="deliverables-list" id="stage-deliverables">
+                <li class="deliverable-item">
+                  <span class="deliverable-icon">✓</span>
+                  <span><strong>Spec Discoverability Audit:</strong> Verify the feature is surfaced contextually on the dashboard rather than buried in settings.</span>
+                </li>
+                <li class="deliverable-item">
+                  <span class="deliverable-icon">✓</span>
+                  <span><strong>Time-to-Value Validation:</strong> Can a non-technical committee member activate and understand this capability with minimal setup? Set a measurable time-to-value target after observing the current workflow.</span>
+                </li>
+                <li class="deliverable-item">
+                  <span class="deliverable-icon">✓</span>
+                  <span><strong>Target Metric Hypothesis:</strong> Define the primary usage signal that indicates real adoption success by Day 60.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-side-box">
+            <div>
+              <div class="side-label">Hypothesis to Test & Validate</div>
+              <div class="hypothesis-quote" id="stage-hypothesis">
+                Features designed with an obvious empty-state prompt and a one-click setup flow achieve significantly higher initial activation than features requiring external manual configuration.
+              </div>
+            </div>
+
+            <div>
+              <div class="side-label">Target Audience & Touchpoint</div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="target-stakeholder-pill" id="stage-audience-1">Product Managers</span>
+                <span class="target-stakeholder-pill" id="stage-audience-2">Management Committees</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The Diagnostic -->
+  <section class="content-section bg-subtle" id="adoption-gap">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">01 · Strategic Diagnosis</div>
+        <h2 class="section-heading">
+          Understanding the adoption gap: three customer behavior hypotheses to investigate.
+        </h2>
+        <p class="section-sub">
+          Rather than assuming internal data, here are the behavioral friction points I would audit to understand why shipped features remain underutilized.
+        </p>
+      </div>
+
+      <div class="diagnostic-grid">
+        <div class="diag-card">
+          <div>
+            <span class="diag-badge">Hypothesis 1</span>
+            <h3 class="diag-title">The Volunteer Attention Constraint</h3>
+            <p class="diag-hypothesis">
+              Management Committee members are volunteers with demanding day jobs. They typically review society affairs in limited windows outside work hours. Technical changelogs that read like software specifications are quickly bypassed unless immediate volunteer relief is obvious.
+            </p>
+          </div>
+          <div class="diag-investigation">
+            Investigation Focus: Audit engagement rates of release announcements across committee communication channels.
+          </div>
+        </div>
+
+        <div class="diag-card">
+          <div>
+            <span class="diag-badge">Hypothesis 2</span>
+            <h3 class="diag-title">The Core Module Gravitational Pull</h3>
+            <p class="diag-hypothesis">
+              Communities actively rely on core essentials like gate approvals and maintenance payments, but advanced ERP capabilities (such as automated CAM reconciliation or multilingual complaint routing) often experience an adoption drop-off without proactive post-launch enablement.
+            </p>
+          </div>
+          <div class="diag-investigation">
+            Investigation Focus: Map the user journey from basic gate usage to deeper Association ERP workflows.
+          </div>
+        </div>
+
+        <div class="diag-card">
+          <div>
+            <span class="diag-badge">Hypothesis 3</span>
+            <h3 class="diag-title">The Collateral Refresh Velocity</h3>
+            <p class="diag-hypothesis">
+              When engineering releases updates continuously, sales enablement collateral (battlecards, pitch decks, USP sheets) can easily fall out of sync, leaving commercial teams without verified proof points during high-stakes competitive renewals or tenders.
+            </p>
+          </div>
+          <div class="diag-investigation">
+            Investigation Focus: Establish a direct SLA between sprint releases and sales collateral updates.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Spec-Stage Checkpoint -->
+  <section class="content-section" id="spec-stage">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">02 · Upstream Alignment</div>
+        <h2 class="section-heading">
+          The Spec-Stage PMM Checkpoint: three PMM checkpoints before sprint sign-off.
+        </h2>
+        <p class="section-sub">
+          Partnering early with Product Managers to agree on positioning, discoverability, and commercial proof at the PRD stage.
+        </p>
+      </div>
+
+      <div class="rubric-grid">
+        <div class="rubric-card">
+          <div class="rubric-num">1</div>
+          <h3 class="rubric-title">Volunteer Time-to-Value</h3>
+          <p class="rubric-body">
+            Can a non-technical committee member activate and understand this capability with minimal setup, without reading a lengthy documentation manual or scheduling an onboarding call? Establish a baseline time-to-value target based on real user observation.
+          </p>
+          <div class="rubric-deliverable">PMM Deliverable: 1-Click Guided Onboarding Flow</div>
+        </div>
+
+        <div class="rubric-card">
+          <div class="rubric-num">2</div>
+          <h3 class="rubric-title">Contextual Discoverability Hook</h3>
+          <p class="rubric-body">
+            Where does the feature physically surface on Day 0? If it is buried multiple levels deep inside administrative configuration menus, discoverability has failed before release.
+          </p>
+          <div class="rubric-deliverable">PMM Deliverable: Dashboard Spotlight & In-App Triggers</div>
+        </div>
+
+        <div class="rubric-card">
+          <div class="rubric-num">3</div>
+          <h3 class="rubric-title">Commercial Proof Metric</h3>
+          <p class="rubric-body">
+            What specific committee outcome, operational time saved, or competitive displacement proof will this feature produce within 90 days to strengthen sales enablement?
+          </p>
+          <div class="rubric-deliverable">PMM Deliverable: Customer Outcome Case Study & Battlecard</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The 60-90 Day Post-Launch Playbook -->
+  <section class="content-section bg-subtle" id="lifecycle-engine">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">03 · Sustained Adoption Engine</div>
+        <h2 class="section-heading">
+          The 60–90 Day Post-Launch Playbook: keeping at it until features are truly adopted.
+        </h2>
+        <p class="section-sub">
+          Moving beyond one-time release announcements to run a structured, phased adoption program that monitors usage data.
+        </p>
+      </div>
+
+      <div class="cadence-timeline">
+        <div class="cadence-card">
+          <div>
+            <div class="cadence-phase">Phase 1 · Days 1–14</div>
+            <h3 class="cadence-title">Contextual Discoverability</h3>
+            <p class="cadence-body">
+              Deploying in-app empty state prompts, targeted WhatsApp committee digests, and plain-English quick start guides to drive initial awareness.
+            </p>
+          </div>
+          <div>
+            <span class="cadence-metric-pill">Signal: Initial Trial Rate</span>
+          </div>
+        </div>
+
+        <div class="cadence-card">
+          <div>
+            <div class="cadence-phase">Phase 2 · Days 15–45</div>
+            <h3 class="cadence-title">Content Engine Drumbeat</h3>
+            <p class="cadence-body">
+              Running bi-weekly Feature of the Month video reels, customer success spotlights, and practical clinics for estate managers.
+            </p>
+          </div>
+          <div>
+            <span class="cadence-metric-pill">Signal: Active Society Usage</span>
+          </div>
+        </div>
+
+        <div class="cadence-card">
+          <div>
+            <div class="cadence-phase">Phase 3 · Days 46–75</div>
+            <h3 class="cadence-title">Usage Telemetry & Diagnostics</h3>
+            <p class="cadence-body">
+              Reviewing product telemetry with PMs to identify drop-off points, reach out to dormant societies, and remove onboarding friction.
+            </p>
+          </div>
+          <div>
+            <span class="cadence-metric-pill">Signal: Dormant Recovery</span>
+          </div>
+        </div>
+
+        <div class="cadence-card">
+          <div>
+            <div class="cadence-phase">Phase 4 · Days 76–90</div>
+            <h3 class="cadence-title">Proof & Commercial Packaging</h3>
+            <p class="cadence-body">
+              Synthesizing customer outcomes into verified case studies, refreshing competitive battlecards, and equipping sales with concrete proof.
+            </p>
+          </div>
+          <div>
+            <span class="cadence-metric-pill">Signal: Renewal & Expansion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Competitive Enablement -->
+  <section class="content-section" id="battlecards">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">04 · Competitive Enablement</div>
+        <h2 class="section-heading">
+          Evidence-based positioning: equipping sales with clear differentiation.
+        </h2>
+        <p class="section-sub">
+          Acknowledging competitor strengths objectively while arming commercial teams with ADDA's verifiable governance advantages.
+        </p>
+      </div>
+
+      <!-- Explicit Protective Disclaimer Banner -->
+      <div class="disclaimer-banner">
+        <span class="disclaimer-dot"></span>
+        <span>Principle: Potential ADDA differentiation to validate: subscription model, data governance, ISO 27001, DPDP readiness, etc. Competitive claims shown below reflect strategic hypotheses to be validated against current product, legal, and commercial documentation before packaging into sales enablement.</span>
+      </div>
+
+      <div class="battlecard-grid">
+        <!-- Battlecard 1 -->
+        <div class="battlecard">
+          <div class="battlecard-header">
+            <div class="bc-category">Ad-Supported Platforms</div>
+            <div class="bc-competitor">vs. MyGate</div>
+          </div>
+          <div class="battlecard-body">
+            <div>
+              <div class="bc-block-title" style="color: var(--ink-muted);">Where They Are Perceived Strong</div>
+              <div class="bc-strength-text">High brand recognition in consumer gate security and aggressive upfront hardware subsidies.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--brand-dark);">Potential ADDA Differentiation to Validate</div>
+              <div class="bc-diff-box">Hypothesis to confirm with product and legal: Subscription-funded ERP model with zero in-app advertising, ISO 27001 certification standards, and built-in DPDP consent workflows that reduce committee liability relative to ad-monetized alternatives.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--emerald);">Enablement Collateral Required</div>
+              <div class="bc-proof-text">1-page DPDP Compliance Checklist for Management Committees and Total Cost of Ownership comparison sheet.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Battlecard 2 -->
+        <div class="battlecard">
+          <div class="battlecard-header">
+            <div class="bc-category">Marketplace Portals</div>
+            <div class="bc-competitor">vs. NoBrokerHood</div>
+          </div>
+          <div class="battlecard-body">
+            <div>
+              <div class="bc-block-title" style="color: var(--ink-muted);">Where They Are Perceived Strong</div>
+              <div class="bc-strength-text">Large consumer reach for property listings and tenant search services.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--brand-dark);">Potential ADDA Differentiation to Validate</div>
+              <div class="bc-diff-box">Hypothesis to confirm with product leadership: Clean separation between community operations and commercial brokerage, ensuring resident directory data is never leveraged for third-party real estate lead generation.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--emerald);">Enablement Collateral Required</div>
+              <div class="bc-proof-text">Data Sovereignty Charter and comparative governance matrix for apartment association AGMs.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Battlecard 3 -->
+        <div class="battlecard">
+          <div class="battlecard-header">
+            <div class="bc-category">Manual Bookkeeping</div>
+            <div class="bc-competitor">vs. Local Spreadsheets & Tally</div>
+          </div>
+          <div class="battlecard-body">
+            <div>
+              <div class="bc-block-title" style="color: var(--ink-muted);">Where They Are Perceived Strong</div>
+              <div class="bc-strength-text">Low direct software expenditure and widespread familiarity among traditional offline accountants.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--brand-dark);">Potential ADDA Differentiation to Validate</div>
+              <div class="bc-diff-box">Hypothesis to confirm through user interviews: Integrated double-entry accounting (ADDA Books) with automated reconciliation and audit trails that reduce treasurer time and error risk compared to manual spreadsheets.</div>
+            </div>
+            <div>
+              <div class="bc-block-title" style="color: var(--emerald);">Enablement Collateral Required</div>
+              <div class="bc-proof-text">Auditor testimonial sheet and accounting error-reduction workflow guide for society treasurers.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Operating Plan -->
+  <section class="content-section bg-subtle" id="execution-plan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">05 · Operating Milestones</div>
+        <h2 class="section-heading">
+          Immediate 30-60-90 day impact: a disciplined operating calendar.
+        </h2>
+        <p class="section-sub">
+          Prioritized operational milestones to align product, marketing, and sales without creating organizational disruption.
+        </p>
+      </div>
+
+      <div class="milestones-grid">
+        <div class="milestone-card">
+          <span class="milestone-badge">Days 1–30 · Discovery & Refresh</span>
+          <h3 class="milestone-title">Foundational Enablement</h3>
+          <ul class="milestone-list">
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Feature Audit:</strong> Identify top under-adopted capabilities across existing customer cohorts.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Refresh Core Battlecards:</strong> Update competitive materials for sales teams with DPDP proof.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Embed with Product:</strong> Establish spec-stage discoverability rubric with PM leads.</span>
+            </li>
+          </ul>
+          <div class="milestone-kpi">Milestone Output: Updated battlecard suite & refreshed sales deck</div>
+        </div>
+
+        <div class="milestone-card">
+          <span class="milestone-badge">Days 31–60 · Content Engine</span>
+          <h3 class="milestone-title">Sustained Adoption Cadence</h3>
+          <ul class="milestone-list">
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Feature of the Month:</strong> Launch recurring video explainers highlighting practical volunteer relief.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>WhatsApp Content Flow:</strong> Deploy bi-weekly practical tips for active Management Committees.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>In-App Contextual Nudges:</strong> Coordinate with PMs to surface spotlight banners in empty states.</span>
+            </li>
+          </ul>
+          <div class="milestone-kpi">Milestone Output: First two Feature of the Month campaigns live</div>
+        </div>
+
+        <div class="milestone-card">
+          <span class="milestone-badge">Days 61–90 · Telemetry & Proof</span>
+          <h3 class="milestone-title">Adoption & Renewal Proof</h3>
+          <ul class="milestone-list">
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Funnel Telemetry Review:</strong> Analyze feature usage curves 60 days post-launch to diagnose drop-offs.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Customer Outcome Case Studies:</strong> Produce the first set of verified customer success stories with committee leaders.</span>
+            </li>
+            <li class="milestone-item">
+              <span class="milestone-bullet">✦</span>
+              <span><strong>Commercial Packaging Review:</strong> Work with leadership to ensure packaging aligns with adopted value.</span>
+            </li>
+          </ul>
+          <div class="milestone-kpi">Milestone Output: First set of verified case studies & quarterly adoption audit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Selected Relevant Work -->
+  <section class="content-section" id="relevant-work">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">06 · Relevant Track Record</div>
+        <h2 class="section-heading">
+          Selected product marketing blueprints across adjacent B2B SaaS and workflow platforms.
+        </h2>
+        <p class="section-sub">
+          Demonstrated execution across enterprise ERP, customer engagement, operational telemetry, and financial infrastructure.
+        </p>
+      </div>
+
+      <div class="case-studies-grid">
+        <div class="case-card">
+          <div>
+            <div class="case-tag">WhatsApp Engagement SaaS</div>
+            <h3 class="case-company">Wati</h3>
+            <p class="case-desc">
+              Repositioned conversational WhatsApp APIs from basic chatbots into an enterprise customer retention engine.
+            </p>
+          </div>
+          <a href="https://bhanuexcalibur.github.io/Wati/" target="_blank" class="case-link">
+            View Case Study →
+          </a>
+        </div>
+
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Enterprise Spend ERP</div>
+            <h3 class="case-company">Coupa</h3>
+            <p class="case-desc">
+              Structured financial governance and audit-compliance narratives displacing legacy enterprise ERP friction.
+            </p>
+          </div>
+          <a href="https://bhanuexcalibur.github.io/Coupa/" target="_blank" class="case-link">
+            View Case Study →
+          </a>
+        </div>
+
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Operations & Telemetry</div>
+            <h3 class="case-company">SquadStack</h3>
+            <p class="case-desc">
+              Mapped workflow telemetry and sales enablement funnels to establish quantifiable operational superiority.
+            </p>
+          </div>
+          <a href="https://bhanuexcalibur.github.io/SquadStack/" target="_blank" class="case-link">
+            View Case Study →
+          </a>
+        </div>
+
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Fintech & Billing Infra</div>
+            <h3 class="case-company">Pazy</h3>
+            <p class="case-desc">
+              Developed automated financial reconciliation positioning for high-velocity enterprise billing operations.
+            </p>
+          </div>
+          <a href="https://bhanuexcalibur.github.io/Pazy/" target="_blank" class="case-link">
+            View Case Study →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h2 class="footer-heading">ADDA.io × Bhanu Kumar</h2>
+          <p class="footer-sub">
+            Bridging product velocity and community adoption through sustained 60–90 day execution, plain-English volunteer relief, and evidence-based sales enablement.
+          </p>
+        </div>
+
+        <div class="footer-actions">
+          <a href="https://drive.google.com/file/d/1a_WRIHF7RawD7rXkwYs3DNuPQf7zq_lf/view?usp=sharing" target="_blank" class="pill-btn pill-btn-outline" style="color:#ffffff; border-color:#334155; background:transparent;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/bhanuexcalibur/" target="_blank" class="pill-btn pill-btn-outline" style="color:#ffffff; border-color:#334155; background:transparent;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:bhanukumar0902@gmail.com" class="pill-btn pill-btn-brand">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            bhanukumar0902@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Strategic Product Marketing Blueprint · Prepared for ADDA Leadership</div>
+        <div>ADDA by 3Five8 Technologies Pvt. Ltd. · 25,000+ Residential Communities</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Interactive Draggable Slider and Lifecycle Steps -->
+  <script>
+    // 1. Draggable Before / After Interactive Slider Logic
+    (function(){
+      var container = document.getElementById('baContainer');
+      var before = document.getElementById('baBefore');
+      var beforeInner = document.getElementById('baBeforeInner');
+      var divider = document.getElementById('baDivider');
+      var handle = document.getElementById('baHandle');
+      if(!container || !before || !divider || !beforeInner) return;
+
+      var pct = 50;
+      var dragging = false;
+      var rafPending = false;
+
+      function syncDOM(){
+        rafPending = false;
+        var w = container.offsetWidth;
+        beforeInner.style.width = w + 'px';
+        before.style.width = pct + '%';
+        divider.style.left = pct + '%';
+      }
+
+      function setPos(clientX){
+        var rect = container.getBoundingClientRect();
+        var p = ((clientX - rect.left) / rect.width) * 100;
+        pct = Math.max(8, Math.min(92, p));
+        if(!rafPending){
+          rafPending = true;
+          requestAnimationFrame(syncDOM);
+        }
+      }
+
+      syncDOM();
+      window.addEventListener('resize', syncDOM, {passive: true});
+
+      // Pointer / Mouse events
+      container.addEventListener('mousedown', function(e){
+        dragging = true;
+        setPos(e.clientX);
+      });
+
+      window.addEventListener('mousemove', function(e){
+        if(!dragging) return;
+        setPos(e.clientX);
+      });
+
+      window.addEventListener('mouseup', function(){
+        dragging = false;
+      });
+
+      // Touch events
+      container.addEventListener('touchstart', function(e){
+        dragging = true;
+        if(e.touches.length > 0) setPos(e.touches[0].clientX);
+      }, {passive: true});
+
+      window.addEventListener('touchmove', function(e){
+        if(!dragging) return;
+        if(e.touches.length > 0) setPos(e.touches[0].clientX);
+      }, {passive: true});
+
+      window.addEventListener('touchend', function(){
+        dragging = false;
+      });
+
+      // Catchy Auto-Sweep animation on load (EnterpriseBot pattern)
+      var animStart = null;
+      function autoSweep(ts){
+        if(!animStart) animStart = ts;
+        var t = Math.min((ts - animStart) / 1400, 1);
+        var ease = t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+        if(t < 0.65){
+          pct = 25 + ease * 50; // Sweeps to ~75%
+        } else {
+          var t2 = (t - 0.65) / 0.35;
+          var ease2 = t2 < 0.5 ? 2*t2*t2 : -1+(4-2*t2)*t2;
+          pct = 75 - ease2 * 25; // Settles back smoothly to 50%
+        }
+        syncDOM();
+        if(t < 1){
+          requestAnimationFrame(autoSweep);
+        }
+      }
+
+      setTimeout(function(){
+        requestAnimationFrame(autoSweep);
+      }, 400);
+    })();
+
+    // 2. Lifecycle Detail Stepper Logic
+    var stageDetails = [
+      {
+        eyebrow: "Stage 1 · Upstream Product Collaboration (Day -15)",
+        heading: "Solving discoverability before engineering writes code",
+        description: "Product marketing sits with PMs at the PRD stage to define the core volunteer pain point, audit time-to-value, and agree on where the feature will physically surface in the product on Day 0.",
+        deliverables: [
+          "<strong>Spec Discoverability Audit:</strong> Verify the feature is surfaced contextually on the dashboard rather than buried in settings.",
+          "<strong>Time-to-Value Validation:</strong> Can a non-technical committee member activate and understand this capability with minimal setup? Set a measurable time-to-value target after observing the current workflow.",
+          "<strong>Target Metric Hypothesis:</strong> Define the primary usage signal that indicates real adoption success by Day 60."
+        ],
+        hypothesis: "Features designed with an obvious empty-state prompt and a one-click setup flow achieve significantly higher initial activation than features requiring external manual configuration.",
+        audiences: ["Product Managers", "Management Committees"]
+      },
+      {
+        eyebrow: "Stage 2 · Launch Activation (Day 0)",
+        heading: "Translating engineering specs into plain volunteer relief",
+        description: "Executing multichannel launch communications that speak directly to time-poor volunteers. Announcing capabilities across WhatsApp, in-app spotlight banners, and plain-English setup guides.",
+        deliverables: [
+          "<strong>Plain-Language Messaging:</strong> Translate technical release notes into direct operational relief for committee members.",
+          "<strong>WhatsApp Broadcast Copy:</strong> 1-click shareable updates for committee WhatsApp groups.",
+          "<strong>In-App Spotlight Banners:</strong> Contextual dashboard notices leading directly to the new workflow."
+        ],
+        hypothesis: "Announcements framed around specific committee headaches (e.g. reducing AGM disputes, eliminating manual ledger entries) generate higher initial open rates than technical feature changelogs.",
+        audiences: ["Society Treasurers", "Estate Managers"]
+      },
+      {
+        eyebrow: "Stage 3 · Sustained Content Drumbeat (Days 15–45)",
+        heading: "Keeping marketing active between major software releases",
+        description: "Building an ongoing content engine around launched features through initiatives like Feature of the Month, video walkthroughs, and practical clinics for estate managers so adoption doesn't stall after launch day.",
+        deliverables: [
+          "<strong>Feature of the Month Reels:</strong> Short, practical visual walkthroughs showing the feature in action.",
+          "<strong>Society Manager Clinics:</strong> Practical webinars guiding ground facility teams on operational setup.",
+          "<strong>Dormancy Nudges:</strong> Contextual reminders sent to societies that have not yet activated the capability."
+        ],
+        hypothesis: "Consistent bi-weekly operational education increases feature activation among communities that missed or bypassed the initial Day-0 launch announcement.",
+        audiences: ["Estate Managers", "Residents"]
+      },
+      {
+        eyebrow: "Stage 4 · Adoption Telemetry & Proof (Days 60–90)",
+        heading: "Evaluating usage numbers and converting adoption into proof",
+        description: "Pulling product usage telemetry to honestly evaluate whether the feature worked, identifying drop-off bottlenecks with PMs, and synthesizing verified customer outcomes into battlecards for field sales.",
+        deliverables: [
+          "<strong>Adoption Funnel Analysis:</strong> Pull product telemetry to measure cohort activation curves and identify drop-off points.",
+          "<strong>Verified Case Studies:</strong> Document customer success stories highlighting measurable operational relief.",
+          "<strong>Sales Battlecard Updates:</strong> Refresh competitive materials with verified product proof points."
+        ],
+        hypothesis: "Hardening sales battlecards with verified customer outcome data increases win rates during annual contract renewals and competitive evaluations.",
+        audiences: ["Sales Teams", "Executive Leadership"]
+      }
+    ];
+
+    var stepButtons = document.querySelectorAll('.framework-step-btn');
+    var frameworkCard = document.getElementById('adoption-framework');
+    var frameworkDetail = document.getElementById('framework-detail');
+    var stageEyebrow = document.getElementById('stage-eyebrow');
+    var stageHeading = document.getElementById('stage-heading');
+    var stageDescription = document.getElementById('stage-description');
+    var stageDeliverables = document.getElementById('stage-deliverables');
+    var stageHypothesis = document.getElementById('stage-hypothesis');
+    var stageAudience1 = document.getElementById('stage-audience-1');
+    var stageAudience2 = document.getElementById('stage-audience-2');
+
+    var userInteracted = false;
+    var animHasRun = false;
+
+    function updateStage(index, withTransition) {
+      var data = stageDetails[index];
+      if (!data) return;
+
+      if (withTransition && frameworkDetail) {
+        frameworkDetail.classList.add('fade-out');
+        setTimeout(function() {
+          renderStageContent(data, index);
+          frameworkDetail.classList.remove('fade-out');
+        }, 110);
+      } else {
+        renderStageContent(data, index);
+      }
+    }
+
+    function renderStageContent(data, index) {
+      stageEyebrow.textContent = data.eyebrow;
+      stageHeading.textContent = data.heading;
+      stageDescription.textContent = data.description;
+      stageHypothesis.textContent = data.hypothesis;
+      stageAudience1.textContent = data.audiences[0];
+      stageAudience2.textContent = data.audiences[1];
+
+      stageDeliverables.innerHTML = data.deliverables.map(function(item) {
+        return '<li class="deliverable-item"><span class="deliverable-icon">✓</span><span>' + item + '</span></li>';
+      }).join('');
+
+      stepButtons.forEach(function(btn, idx) {
+        btn.classList.toggle('active', idx === index);
+      });
+    }
+
+    // Manual user click cancels any automated preview
+    stepButtons.forEach(function(btn, idx) {
+      btn.addEventListener('click', function() {
+        userInteracted = true;
+        updateStage(idx, true);
+      });
+    });
+
+    // Scroll-triggered quick preview animation (starts ONLY when scrolled into view)
+    function triggerFrameworkSequence() {
+      if (animHasRun || userInteracted) return;
+      animHasRun = true;
+
+      // Quick brisk sequence across stages so user immediately understands interactivity
+      var previewSequence = [1, 2, 3, 0];
+      var stepIdx = 0;
+
+      function runNext() {
+        if (userInteracted || stepIdx >= previewSequence.length) return;
+        var nextStep = previewSequence[stepIdx];
+        stepIdx++;
+        updateStage(nextStep, true);
+
+        if (stepIdx < previewSequence.length) {
+          setTimeout(runNext, 460); // Fast initial pace
+        }
+      }
+
+      setTimeout(runNext, 320);
+    }
+
+    if (frameworkCard && 'IntersectionObserver' in window) {
+      var frameworkObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !animHasRun) {
+            triggerFrameworkSequence();
+            frameworkObserver.unobserve(frameworkCard);
+          }
+        });
+      }, { threshold: 0.25 });
+      frameworkObserver.observe(frameworkCard);
+    }
+  </script>
+</body>
+</html>
